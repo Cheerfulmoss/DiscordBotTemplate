@@ -11,6 +11,7 @@ global bot_name
 class ExampleCog(commands.Cog):
 
     def __init__(self, client):
+        self.prohibited = json.load(open(f"{os.getcwd()}\\cogs\\ServerProperties\\prohibit.json", "r"))["servers"]
         self.client = client
 
 
