@@ -18,7 +18,7 @@ class ExampleCog(commands.Cog):
     async def on_ready(self):
         global bot_name
         bot_name = re.search('^[^#]*', str(self.client.user)).group(0)
-        debug_title_ready = title_format(f"{bot_name}: TextUtil Response")
+        debug_title_ready = title_format(f"{bot_name}: ExampleCog Response")
         print(debug_title_ready[0])
         print(f"{datetime.datetime.now()}   ||   TextUtil cog loaded")
         print(debug_title_ready[1])
